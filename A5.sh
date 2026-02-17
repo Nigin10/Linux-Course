@@ -1,24 +1,15 @@
 #!/bin/bash
 
-# ==============================
-# file_analyzer.sh
-# Demonstrates:
-# - Recursive functions
-# - Redirection & error handling
-# - Here document & here string
-# - Special parameters
-# - Regular expressions
-# - getopts for argument parsing
-# ==============================
+
 
 ERROR_LOG="errors.log"
 
 # Clear previous errors
 > "$ERROR_LOG"
 
-# ------------------------------
+
 # Help Menu (Here Document)
-# ------------------------------
+
 show_help() {
 cat << EOF
 Usage: $0 [OPTIONS]
@@ -66,7 +57,7 @@ recursive_search() {
 }
 
 # ------------------------------
-# Input Validation (Regex)
+# Input Validation 
 # ------------------------------
 validate_keyword() {
     if [[ ! "$1" =~ ^[a-zA-Z0-9_]+$ ]]; then
